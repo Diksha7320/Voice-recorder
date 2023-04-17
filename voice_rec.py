@@ -25,11 +25,11 @@ def Record():
     while temp>0:
         root.update()
         time.sleep(1)
-        temp=temp-1
+        temp-=1
 
         if(temp==0):
             messagebox.showinfo("Time countdown","Time's up!!")
-        Label(text=f"{str(temp)}",font="arial 40",width=4,background="#4a4a4a").pack(x=240,y=590)
+        Label(text=f"{str(temp)}",font="arial 40",width=4,background="#4a4a4a").place(x=240,y=590)
 
     sound.wait()
     write("recording.wav",freq,recording)
